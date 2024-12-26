@@ -1,0 +1,75 @@
+{
+  "name": "solid-app",
+  "version": "2.5.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "vite --open --host --force",
+    "start:prod": "vite --open --host --force --mode production",
+    "build": "vite build --sourcemap=true",
+    "build:analyze": "vite-bundle-visualizer",
+    "preview": "vite preview --open --port 8080",
+    "test": "vitest",
+    "tsc": "tsc",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepare": "husky",
+    "lint": "eslint '**/*.{js,ts,jsx,tsx}' --format stylish --ignore-pattern 'dist/*' --ignore-pattern 'node_modules'",
+    "lint-fix": "eslint '**/*.{js,ts,jsx,tsx}' --fix  --ignore-pattern 'dist/*' --ignore-pattern 'node_modules'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lightningjs/l3-ui-theme-base": "^0.3.3",
+    "@lightningjs/renderer": "^2.6.2",
+    "@lightningtv/core": "^2.5.0",
+    "@lightningtv/solid": "^2.5.0",
+    "@lightningtv/solid-ui": "^0.31.2",
+    "@lightningtv/vite-hex-transform": "^1.1.0",
+    "@solid-primitives/i18n": "^2.1.1",
+    "@solidjs/router": "^0.15.1",
+    "@storybook/test": "^8.4.2",
+    "@vitejs/plugin-legacy": "^5.4.3",
+    "solid-js": "^1.9.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@lightningtv/core": "$@lightningtv/core",
+      "@lightningtv/solid": "$@lightningtv/solid",
+      "@lightningjs/renderer": "$@lightningjs/renderer"
+    }
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
+    "@eslint/js": "^9.14.0",
+    "@storybook/addon-essentials": "^8.4.2",
+    "@storybook/addon-interactions": "^8.4.2",
+    "@storybook/addon-links": "^8.4.2",
+    "@storybook/blocks": "^8.4.2",
+    "@storybook/html": "^8.4.2",
+    "@storybook/html-vite": "^8.4.2",
+    "@storybook/manager-api": "^8.4.2",
+    "@storybook/theming": "^8.4.2",
+    "@vitest/browser": "^2.1.4",
+    "eslint": "^9.14.0",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.12.0",
+    "husky": "^9.1.6",
+    "jsdom": "^25.0.1",
+    "lint-staged": "^15.2.10",
+    "playwright": "^1.48.2",
+    "prettier": "^3.3.3",
+    "storybook": "^8.4.2",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.13.0",
+    "vite": "^5.4.10",
+    "vite-bundle-visualizer": "^1.2.1",
+    "vite-plugin-cross-origin-isolation": "^0.1.6",
+    "vite-plugin-solid": "^2.10.2",
+    "vitest": "^2.1.4"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
